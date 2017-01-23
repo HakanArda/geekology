@@ -59,7 +59,7 @@ body{
     overflow: hidden;
     position: relative;
     border: 0;
-
+    transition: all .3s;
     &.deadpool{
       background-color: red;
     }
@@ -109,11 +109,6 @@ body{
       }
     }
   }
-}
-
-.clicked{
-
-  transition: all .3s;
 }
 
 .banner-with-superman{

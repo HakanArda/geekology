@@ -134,15 +134,15 @@
     <!-- endbuild -->
 
     <script type="text/javascript">
-      //$(".offset-deneme").offset({left: 50})
       $( ".well" ).click(function() {
-        var left = $(this).offset().left;
-
-        $( this ).addClass( "clicked" );
+        var left = $(this).offset().left - 30;
+        $(this).addClass("clicked");
         $( this ).css({
-          transform: "translateX(-"+left+"px) translateY(-20px)",
-          height:"400px"
+          transform: "translateX(-"+left+"px) scale(1.2)"
         });
+      });
+      $( ".well.deadpool.clicked" ).click(function() {
+        $(this).removeClass("clicked");
       });
     </script>
 
