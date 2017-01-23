@@ -42,10 +42,11 @@
     <div class="image-part">
     </div>
     <div class="super-heroes">
+      <div class="panel"><a href="#" id="close-superhero">KAPAT</a></div>
       <div class="container">
         <div class="row">
           <div class="col-md-3">
-              <div class="well deadpool" style="background-image: url('images/deadpool.png')">
+              <div class="well deadpool" data-content="red" style="background-image: url('images/deadpool.png')">
                 <div class="bubble">
                   <img src="images/bubble.png" alt="">
                   <p>I **** love chimichangas..!</p>
@@ -56,7 +57,7 @@
               </div>
           </div>
           <div class="col-md-3">
-            <div class="well batman" style="background-image: url('images/batman.png')">
+            <div class="well batman" data-content="darkblue" style="background-image: url('images/batman.png')">
               <div class="bubble">
                 <img src="images/bubble.png" alt="">
                 <p>Because I'm BATMAN!</p>
@@ -67,7 +68,7 @@
             </div>
           </div>
           <div class="col-md-3">
-            <div class="well" style="background-image: url('images/spawn.jpg')">
+            <div class="well spawn" data-content="green" style="background-image: url('images/spawn.jpg')">
               <div class="bubble">
                 <img src="images/bubble.png" alt="">
                 <p>Kill...</p>
@@ -78,7 +79,7 @@
             </div>
           </div>
           <div class="col-md-3">
-            <div class="well" style="background-image: url('images/hellboy.jpg')">
+            <div class="well hellboy" data-content="orange" style="background-image: url('images/hellboy.jpg')">
               <div class="bubble">
                 <img src="images/bubble.png" alt="">
                 <p>Don't mess with me man</p>
@@ -136,14 +137,27 @@
     <script type="text/javascript">
       $( ".well" ).click(function() {
         var left = $(this).offset().left - 30;
-        $(this).addClass("clicked");
+        $(this).addClass("active");
         $( this ).css({
-          transform: "translateX(-"+left+"px) scale(1.2)"
+          transform: "translateX(-"+left+"px)",
+          margin: 0,
+          height: "450px"
         });
+        $(".panel").css("background-color", $(this).data().content);
+        $(".panel").addClass("active-panel");
       });
-      $( ".well.deadpool.clicked" ).click(function() {
-        $(this).removeClass("clicked");
-      });
+
+
+      $("#close-superhero").click(function(e) {
+        e.preventDefault()
+        $(".well").removeClass("active");
+        $(".well").css({
+          transform: "translateX(0)",
+          margin: "50px 0",
+          height: "350px"
+        });
+        $(".panel").removeClass("active-panel");
+      })
     </script>
 
   </body>

@@ -50,9 +50,10 @@ body{
 }
 .super-heroes{
   background-color: #140e2c;
-  padding: 50px 0;
+  position: relative;
   .well{
     height: 350px;
+    margin: 50px 0;
     box-shadow: none;
     background-color: transparent;
     background-size: cover;
@@ -149,4 +150,27 @@ body{
     margin-top: 162px;
     float: right;
   }
+}
+
+.active{
+  z-index: 20;
+}
+.panel{
+  z-index: -10;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  visibility: hidden;
+  a{
+    float: right;
+  }
+}
+.active-panel{
+  visibility: inherit;
+  z-index: 10;
 }
