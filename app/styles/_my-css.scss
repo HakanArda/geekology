@@ -1,0 +1,157 @@
+$primary-color: #3498DB;
+$secondary-color: #FF9600;
+
+body{
+  padding: 0 !important;
+}
+.header{
+  .nav-pills > li + li{
+    margin-left: 10px;
+  }
+  a{
+    background-color: white;
+    border-bottom: 1px solid $primary-color;
+    color: $primary-color;
+    border-radius: 0 !important;
+  }
+  .active a{
+    background-color: $primary-color !important;
+    color: white;
+    border-radius: 5px !important;
+  }
+  .text-muted{
+    color: $primary-color;
+  }
+}
+.container{
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.image-part{
+  background-image: url("../images/main_image.jpg");
+  background-size: cover;
+  height: 675px;
+  position: relative;
+  margin-bottom: 50px;
+}
+.header{
+  display: block;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+  padding: 10px 45px;
+  background-color: white;
+  h3{
+    padding: 0;
+  }
+}
+.super-heroes{
+  background-color: #140e2c;
+  padding: 50px 0;
+  .well{
+    height: 350px;
+    box-shadow: none;
+    background-color: transparent;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    border: 0;
+
+    &.deadpool{
+      background-color: red;
+    }
+    &.batman{
+      background-color: darkblue;
+    }
+    a{
+      color: black;
+    }
+    &:hover{
+      .footer, .bubble{
+        opacity: 1;
+        transform: translateY(0) rotate(0);
+      }
+    }
+    .footer{
+      color: black;
+      background-color: rgba(255, 255, 255, .6);
+      position: absolute;
+      bottom: 30px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      height: 30px;
+      padding-top: 0;
+      border: 0;
+      opacity: 0;
+      transition: all .5s;
+      h3{
+        margin: 0;
+      }
+    }
+    .bubble{
+      position: absolute;
+      top: 150px;
+      opacity: 0;
+      transform: translateY(50px) rotate(20deg);
+      transition: all .5s;
+      img{
+        height: 100px;
+      }
+      p{
+        position: absolute;
+        top: 45px;
+        left: 20px;
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+.clicked{
+
+  transition: all .3s;
+}
+
+.banner-with-superman{
+  background-color: $primary-color;
+  margin-top: 200px;
+  margin-bottom: 200px;
+  height: 350px;
+  width: 100%;
+  position: relative;
+  img{
+    position: absolute;
+    width: 50%;
+    top: -250px;
+    right: 50px;
+  }
+  h4{
+    color: white;
+    font-size: 25px;
+    margin-top: 162px;
+  }
+}
+.banner-with-spiderman{
+  background-color: $secondary-color;
+  margin-top: 200px;
+  margin-bottom: 200px;
+  height: 350px;
+  width: 100%;
+  position: relative;
+  img{
+    position: absolute;
+    width: 40%;
+    top: -100px;
+    left: 50px;
+  }
+  h4{
+    color: white;
+    font-size: 25px;
+    margin-top: 162px;
+    float: right;
+  }
+}

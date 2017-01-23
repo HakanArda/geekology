@@ -1,0 +1,150 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Geekology</title>
+    <meta name="description" content="Effect inspiration for opening an image grid item." />
+  	<meta name="keywords" content="image grid, effect, inspiration, css, javascript, animation, masonry" />
+  	<meta name="author" content="Codrops" />
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="header">
+      <div class="container">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="#">Ana Sayfa</a></li>
+          <li><a href="#">Kahramanlar</a></li>
+          <li><a href="#">Çizgi Romanlar</a></li>
+          <li><a href="#">Diziler &amp; Filmler</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">İletişim</a></li>
+        </ul>
+        <h3 class="text-muted">GEEKOLOGY</h3>
+      </div>
+    </div>
+    <div class="image-part">
+    </div>
+    <div class="super-heroes">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+              <div class="well deadpool" style="background-image: url('images/deadpool.png')">
+                <div class="bubble">
+                  <img src="images/bubble.png" alt="">
+                  <p>I **** love chimichangas..!</p>
+                </div>
+                <div class="footer">
+                  <h3>DEADPOOL</h3>
+                </div>
+              </div>
+          </div>
+          <div class="col-md-3">
+            <div class="well batman" style="background-image: url('images/batman.png')">
+              <div class="bubble">
+                <img src="images/bubble.png" alt="">
+                <p>Because I'm BATMAN!</p>
+              </div>
+              <div class="footer">
+                <h3>BATMAN</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="well" style="background-image: url('images/spawn.jpg')">
+              <div class="bubble">
+                <img src="images/bubble.png" alt="">
+                <p>Kill...</p>
+              </div>
+              <div class="footer">
+                <h3>SPAWN</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="well" style="background-image: url('images/hellboy.jpg')">
+              <div class="bubble">
+                <img src="images/bubble.png" alt="">
+                <p>Don't mess with me man</p>
+              </div>
+              <div class="footer">
+                <h3>HELLBOY</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="banner-with-superman">
+      <div class="container">
+        <h4><em>"Nobody tears my city apart and gets away with it."</em></h4>
+      </div>
+      <img src="images/superman.png" alt="">
+    </div>
+    <div class="banner-with-spiderman">
+      <div class="container">
+        <h4><em>"Great power comes with great responsibility."</em></h4>
+      </div>
+      <img src="images/spidey.png" alt="">
+    </div>
+
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+
+
+    <!-- build:js scripts/plugins.js -->
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+
+    <script type="text/javascript">
+      //$(".offset-deneme").offset({left: 50})
+      $( ".well" ).click(function() {
+        var left = $(this).offset().left;
+
+        $( this ).addClass( "clicked" );
+        $( this ).css({
+          transform: "translateX(-"+left+"px) translateY(-20px)",
+          height:"400px"
+        });
+      });
+    </script>
+
+  </body>
+</html>
