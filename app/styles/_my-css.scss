@@ -34,7 +34,16 @@ body{
   background-size: cover;
   height: 675px;
   position: relative;
-  margin-bottom: 50px;
+  &:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .40);
+    z-index: 9;
+  }
 }
 .header{
   display: block;
@@ -62,10 +71,16 @@ body{
     border: 0;
     transition: all .3s;
     &.deadpool{
-      background-color: red;
+      background-color: #CF000F;
     }
     &.batman{
-      background-color: darkblue;
+      background-color: #3A539B;
+    }
+    &.spawn{
+      background-color: #F7CA18;
+    }
+    &.hellboy{
+      background-color: #26A65B;
     }
     a{
       color: black;
@@ -168,6 +183,13 @@ body{
   visibility: hidden;
   a{
     float: right;
+    i{
+      font-size: 40px;
+      color: black;
+      position: relative;
+      right: 15px;
+      top: 15px;
+    }
   }
 }
 .active-panel{
